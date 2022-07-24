@@ -6,6 +6,6 @@ try:
     _num = input('Введите первое число: ')
     _num2 = input('Введите второе число: ')
     result = int(_num) + int(_num2)
-except (ValueError) as e:
+except ValueError as e:
     result = _num + _num2
 print(result)
