@@ -1,10 +1,13 @@
 """Вычислить остаток от деления и целую часть, не используя знаки % и //"""
-from decimal import Decimal #вызов модуля
-from colorama import Fore #так симпотичней будет
+from decimal import Decimal   #вызов модуля
+from colorama import Fore   #так симпотичней будет
+try:
+    delim, delit = [float(i) for i in input('Введите делимое и делитель: ').split()]   #ввод данных, исключая str
+except ValueError as e:
+    print(e)
+    delim, delit = [float(i) for i in input('Делимое и делитель может быть только цифрой: ').split()]
 
-delim, delit = [float(i) for i in input('Введите делимое и делитель: ').split()] #ввод данных, исключая str
-
-while True: #исключение деления на ноль
+while True:   #исключение деления на ноль
     if delit == 0:
         print("Деление на '0'!")
         delit = float(input('Повторите ввод делителя: '))
