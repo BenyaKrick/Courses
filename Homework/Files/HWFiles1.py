@@ -6,9 +6,12 @@
 - цена (в рублях) товара за 1 шт. (целое число).
 Напишите программу, подсчитывающую общую стоимость заказа.
 """
-file = open('prices.txt', 'r', encoding='utf-8')
-sum = 0
-_line = file.read().split()
-for i in range(1, len(_line), 3):
-    sum += int(_line[i]) * int(_line[i + 1])
-print(sum)
+try:
+    with open('prices.txt', 'r', encoding='utf-8') as _file:
+        _sum = 0
+        _line = _file.read().split()
+        for i in range(1, len(_line), 3):
+            _sum += int(_line[i]) * int(_line[i + 1])
+    print(_sum)
+except Exception as e:
+    print("Ошибка при работе с файлом:", e)
