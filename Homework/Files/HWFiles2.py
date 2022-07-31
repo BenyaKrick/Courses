@@ -7,7 +7,7 @@ _count = 0
 try:
     import os
     _list = os.listdir()
-    print(_list)
+
 
     for i in _list:
         with open(i, 'r', encoding='utf-8') as _file:
