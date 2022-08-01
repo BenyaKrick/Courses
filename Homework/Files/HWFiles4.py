@@ -7,3 +7,25 @@
  forbidden_words.txt содержит запрещенное слово exam, то слова exam, Exam, ExaM, EXAM и exAm должны быть
  заменены на ****.
 """
+string = input('введите название файла для поиска : ')
+
+try:
+    import os
+    _list = os.listdir()
+    print(_list)
+    for i in _list:
+        if i == string:
+            with open(i, 'r', encoding='utf-8') as file:
+                searchfile = file.read()
+                for j in searchfile:
+                    if j == 'exam':
+                        searchfile[j] = '****'
+        print(searchfile)
+
+
+    with open(i, 'w', encoding='utf-8') as file:
+        searchfile = file.write(searchfile)
+        print(searchfile)
+
+except Exception as e:
+    print("Ошибка при работе с файлом:", e)
