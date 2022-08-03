@@ -1,10 +1,12 @@
 from random import randint
 
-try:
-    _list = set([randint(0, 9999) for i in range(1, 10000)])
-    _list1 = set([randint(0, 9999) for i in range(1, 10000)])
-    _listresult = list(_list ^ _list1)
+_list = [randint(0, 9) for i in range(0, 10)]
+print(_list)
 
-    print(_listresult)
+try:
+    num = int(input('Введите делимое: '))
+    for i in _list:
+        result = num / i
+        print(result)
 except Exception as e:
     print("Ошибка: ", e)
