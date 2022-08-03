@@ -1,12 +1,13 @@
 from random import randint
 
 _list = [randint(0, 9) for i in range(0, 10)]
-print(_list)
 
 try:
-    num = int(input('Введите делимое: '))
+    num = float(input('Введите делимое: '))
     for i in _list:
         result = num / i
-        print(result)
+except ZeroDivisionError:
+    print("Деление на ноль ")
+
 except Exception as e:
-    print("Ошибка: ", e)
+    print("Введено не числовое значение: ", e)
