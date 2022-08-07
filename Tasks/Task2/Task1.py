@@ -1,5 +1,13 @@
-try:
-    _tuple = sorted(tuple((i for i in range(50) if type(i) != float)))
-    print(tuple(_tuple))
-except Exception as e:
-    print("Ошибка: ", e)
+"""
+1. Необходимо написать программу, которая сортирует представленный кортеж, состоящий из целых чисел по возрастанию и
+выводит его на экран. Если хотя бы один элемент не является целым числом, то на экран выводится исходный исходный
+кортеж.
+"""
+_tuple = tuple(1, 7, 8, 9, 56, 87, 0.6, 0.6)
+
+for i in _tuple:
+    if type(i) != int:
+        print(_tuple)
+        break
+else:
+    print(tuple(sorted(_tuple)))

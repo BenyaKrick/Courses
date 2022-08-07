@@ -1,13 +1,19 @@
+"""
+9. Дан список содержащий любые значения. Пользователь вводит число. С помощью механизма обработки исключений,
+последовательно делить введенное число на значения из списка. В случае возникновения исключения, выводить
+детали ошибки. В случае деления на ноль, прервать цикл.
+"""
 from random import randint
 
 _list = [randint(0, 9) for i in range(0, 10)]
 
-try:
-    num = float(input('Введите делимое: '))
-    for i in _list:
-        result = num / i
-except ZeroDivisionError:
-    print("Деление на ноль ")
 
-except Exception as e:
-    print("Введено не числовое значение: ", e)
+num = float(input('Введите делимое: '))
+for i in _list:
+    try:
+        result = num / i
+    except ZeroDivisionError:
+        print("Деление на ноль ")
+        break
+    except Exception as e:
+        print("Введено не числовое значение: ", e)
