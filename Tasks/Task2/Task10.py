@@ -18,4 +18,3 @@ with open('file.txt', 'r', encoding='utf-8') as text:
     text.seek(0)
 
     print(f'Количество латинских букв = {_count1}, Cтрок в тексте = {_count+1}')
-
