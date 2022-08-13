@@ -6,9 +6,9 @@ from collections.abc import Hashable
 
 
 def list_to_set(_list):
-    _set = set(map(lambda x: x, (i for i in _list if isinstance(i, Hashable))))
+    _set = set(filter(lambda x: isinstance(x, Hashable), _string))
     return _set
 
 
-_string = 1, [2], 55, 55, {1, 2, 3}, (2, 2), 5.11
+_string = 1, [2, 4, 6], 55, 55, {1, 2, 3}, (2, 2), 5.11, None, True
 print(list_to_set(_string))
