@@ -5,7 +5,7 @@
 
 
 def text_pangrama(t):
-    return not set('abcdefghijklmnopqrstuvwxyz') - set(t.lower())
+    return not (set('abcdefghijklmnopqrstuvwxyz') - set(t.lower()))
 
 
 text = input()

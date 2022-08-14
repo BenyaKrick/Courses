@@ -9,8 +9,8 @@ def custom_ange(start, end, step=1):
     if start > end:
         start, end = end, start
     try:
-        return (i for i in range(start, end + 1, step) if isinstance(start, end, step, int))
-    except:
+        return (_ for _ in range(start, end + 1, step))
+    except ValueError:
         print("Ошибка ввода, допускаются только целые числа")
 
 
