@@ -7,11 +7,11 @@ import time
 def data_time(func):
     start_time = datetime.now()
     time.sleep(5)
-
-    return (datetime.now() - start_time)
+    (datetime.now() - start_time)
+    return func
 @data_time
 def sum_range(start, end):
     if start > end:
         start, end = end, start
     return sum(range(start, end + 1))
-print(sum_range(4, 1))
+print(sum_range(1, 100099))
