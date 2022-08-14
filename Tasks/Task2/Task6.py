@@ -15,5 +15,5 @@ try:
     new_dict = {key: value for key, value in _dict.items() if value < price}
     print('Коктейли по цене ниже', price, ':')
     print(*new_dict.keys(), sep=', ')
-except Exception as e:
-    print("Ошибка: ", e)
+except ValueError:
+    print("Цена может быть только числом")

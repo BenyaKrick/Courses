@@ -3,8 +3,8 @@
 ● количество букв латинского алфавита;
 ● число строк.
 """
-_count = 0 #счетчик строк
-_count1 = 0 #счетчик латинских букв
+list_count = 0
+alfa_count = 0
 
 
 with open('file.txt', 'r', encoding='utf-8') as text:
@@ -12,9 +12,8 @@ with open('file.txt', 'r', encoding='utf-8') as text:
 
     for i in _line:
         if i == '\n':
-            _count += 1
+            list_count += 1
         if i.lower().isalpha():
-            _count1 += 1
-    text.seek(0)
+            alfa_count += 1
 
-    print(f'Количество латинских букв = {_count1}, Cтрок в тексте = {_count+1}')
+    print(f'Количество латинских букв = {alfa_count}, Cтрок в тексте = {list_count + 1}')
