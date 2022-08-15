@@ -2,22 +2,27 @@
 [5] Написать функцию-декоратор, которая вычисляет время выполнения декорируемой функции,
 а также выводит на экран имя функции и ее параметры.
 """
+
+
 from datetime import datetime
-import time
+
+time_now = datetime.now()
 
 
-def data_time(func):
-    start_time = datetime.now()
-    time.sleep(5)
-    (datetime.now() - start_time)
-    return func
+def decorating_func(own_func):
+    def wrapper(*args, **kwargs):
+
+        print(datetime.now() - time_now)
+        return own_func(*args, **kwargs)
+
+    return wrapper
 
 
-@data_time
+@decorating_func
 def sum_range(start, end):
     if start > end:
         start, end = end, start
     return sum(range(start, end + 1))
 
 
-print(sum_range(1, 100099))
+print(sum_range(1, 1000900))

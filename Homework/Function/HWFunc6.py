@@ -14,4 +14,4 @@ def custom_ange(start, end, step=1):
         print("Ошибка ввода, допускаются только целые числа")
 
 
-print(custom_ange(0, 6))
+print(custom_ange(0, 'r'))
