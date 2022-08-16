@@ -1,11 +1,11 @@
 def decorating_func(func):
     def wrapper(*args, **kwargs):
-        #operations before run
+        # operations before run
         result = func(*args, **kwargs)
-        #operations_after_run
+        # operations_after_run
         return result
-    return wrapper
 
+    return wrapper
 
 
 @decorating_func
