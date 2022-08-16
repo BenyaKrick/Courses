@@ -4,7 +4,7 @@
 """
 
 
-def text_pangrama(t):
+def text_pangrama(in_string):
     return not (set('abcdefghijklmnopqrstuvwxyz') - set(t.lower()))
 
 

@@ -3,18 +3,17 @@
 а также выводит на экран имя функции и ее параметры.
 """
 
-
+import inspect
 from datetime import datetime
-
-time_now = datetime.now()
 
 
 def decorating_func(own_func):
     def wrapper(*args, **kwargs):
-
-        print(datetime.now() - time_now)
-        return own_func(*args, **kwargs)
-
+        time_now = datetime.now()
+        result = own_func(*args, **kwargs)
+        print(f'Speed of function: {datetime.now() - time_now},\nName of function: {own_func.__qualname__}')
+        print(f'Name of parametrs: {inspect.signature(own_func)}')
+        return result
     return wrapper
 
 

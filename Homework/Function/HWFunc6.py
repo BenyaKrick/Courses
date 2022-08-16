@@ -5,13 +5,13 @@
 """
 
 
-def custom_ange(start, end, step=1):
+def custom_age(start, end, step=1):
     if start > end:
         start, end = end, start
-    try:
-        return (_ for _ in range(start, end + 1, step))
-    except ValueError:
-        print("Ошибка ввода, допускаются только целые числа")
+
+    yield from range(start, end + 1, step)
 
 
-print(custom_ange(0, 'r'))
+a = custom_age(1, 10, 4)
+for index in a:
+    print(index)
