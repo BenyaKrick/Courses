@@ -12,6 +12,6 @@ def custom_age(start, end, step=1):
     yield from range(start, end + 1, step)
 
 
-a = custom_age(1, 10, 4)
-for index in a:
+num_fromgen = custom_age(1, 10, 4)
+for index in num_fromgen:
     print(index)
