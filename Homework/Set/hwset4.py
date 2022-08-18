@@ -5,9 +5,16 @@
 само число 4, строка «44» (второе повторение, т.е. число дублируется в строке),
 строка «444» (третье повторение, т.е. строка множится на 3).  Результаты выведите на экран.
 """
-_set = set()
-_list = [1, 2, 3, 4, 1, 2, 4, 4, 2, 4]
-for i in _list:
-    if _list.count(i) > 1:
-        _set.add(str(i) * _list.count(i))
-print(_set)
+from random import randint
+
+
+in_list = [randint(0, 10) for _ in range(10)]
+print(in_list)
+
+result_set = set()
+for index, item in enumerate(in_list):
+    count = in_list[:index + 1].count(item)
+    new_item = item if count == 1 else str(item) * count
+    result_set.add(new_item)
+
+print(result_set)
