@@ -11,6 +11,9 @@ get_group_number, set_name_age, set_group_number. Метод get_name нужен
 
 
 class ClassStudent:
+    # name = 'Ivan'
+    # age = 18
+    # group_number = '10A'
     def __init__(self, name='Ivan', age=18, group_number='10A'):
         self.name = name
         self.age = age
@@ -23,11 +26,11 @@ class ClassStudent:
         return self.age
 
     def get_group_number(self):
-        return self.get_group_number
+        return self.groupNumber
 
     def set_group_number(self, group_number):
         self.groupNumber = group_number
-        return self.group_number
+        return self.groupNumber
 
     def set_name_age(self, name, age):
         self.age = name
@@ -35,5 +38,10 @@ class ClassStudent:
         return name, age
 
 
+Sergei = ClassStudent("Сергей", 40, "v90")
+Julia = ClassStudent("Юля", 24, "3k")
 
-
+print(ClassStudent.__dict__)
+# print(get_name(), get_age(), get_group_number())
+print(Sergei.__dict__)
+print(Julia.__dict__)
