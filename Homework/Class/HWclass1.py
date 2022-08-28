@@ -8,21 +8,32 @@ get_group_number, set_name_age, set_group_number. Метод get_name нужен
 изменить номер группы установленный по умолчанию. В программе необходимо создать пять экземпляров класса Student,
 установить им разные имена, возраст и номер группы.
 """
-class ClassStudent:
-    name = 'Ivan'
-    group_number = 18
-    age = "10A"
-    def get_name(self):
-        pass
-    def get_age(self):
-        pass
-    def get_group_nimber(self):
-        pass
-    def set_name_age(self):
-        pass
-    def set_group_number(self):
-        pass
 
-STATIC_FIELD = 'value_of_statis_field'
-def __init__(self, dynamic_field): self.dynamic_field = dynamic_field
-class_object = ClassName('value_of_dynamic_field')
+
+class ClassStudent:
+    def __init__(self, name='Ivan', age=18, group_number='10A'):
+        self.name = name
+        self.age = age
+        self.groupNumber = group_number
+
+    def get_name(self):
+        return self.name
+
+    def get_age(self):
+        return self.age
+
+    def get_group_number(self):
+        return self.get_group_number
+
+    def set_group_number(self, group_number):
+        self.groupNumber = group_number
+        return self.group_number
+
+    def set_name_age(self, name, age):
+        self.age = name
+        self.name = age
+        return name, age
+
+
+
+
