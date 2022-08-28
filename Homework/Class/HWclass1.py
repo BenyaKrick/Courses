@@ -38,10 +38,10 @@ class ClassStudent:
         return name, age
 
 
+Ivan = ClassStudent()
 Sergei = ClassStudent("Сергей", 40, "v90")
 Julia = ClassStudent("Юля", 24, "3k")
 
-print(ClassStudent.__dict__)
-# print(get_name(), get_age(), get_group_number())
+print(Ivan.__dict__)
 print(Sergei.__dict__)
 print(Julia.__dict__)
