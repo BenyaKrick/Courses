@@ -42,6 +42,7 @@ Ivan = ClassStudent()
 Sergei = ClassStudent("Сергей", 40, "v90")
 Julia = ClassStudent("Юля", 24, "3k")
 
+
 print(Ivan.__dict__)
 print(Sergei.__dict__)
 print(Julia.__dict__)
