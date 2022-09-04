@@ -41,8 +41,9 @@ class ClassStudent:
 Ivan = ClassStudent()
 Sergei = ClassStudent("Сергей", 40, "v90")
 Julia = ClassStudent("Юля", 24, "3k")
-
+olya = ClassStudent('Оля', 11, '6A')
 
 print(Ivan.__dict__)
 print(Sergei.__dict__)
 print(Julia.__dict__)
+print(olya.__dict__)
