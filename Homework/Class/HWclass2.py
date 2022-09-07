@@ -12,23 +12,23 @@ class ClassMath:
         self.b = b
 
     def addition(self):
-        print(self.a - self.b)
+        return self.a - self.b
 
     def multiplication(self):
-        print(self.a * self.b)
+        return self.a * self.b
 
     def division(self):
         if self.b != 0:
-            print(self.a / self.b)
+            return self.a / self.b
         else:
             print("Деление на ноль")
 
     def subtraction(self):
-        return print(self.a - self.b)
+        return self.a - self.b
 
 
 var = ClassMath(6, 3)
-var.addition()
-var.multiplication()
-var.division()
-var.subtraction()
+print(var.addition())
+print(var.multiplication())
+print(var.division())
+print(var.subtraction())
