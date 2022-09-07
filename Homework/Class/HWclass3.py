@@ -7,36 +7,33 @@ type (тип), year (год). Напишите пять методов. Перв
 
 
 class Car:
-    color = None
-    typecar = None
-    year = None
 
-    def __init__(self, color, typecar, year):
+    def __init__(self, color, cartype, year):
         self.color = color
-        self.typecar = typecar
+        self.cartype = cartype
         self.year = year
 
-    def EngineON(self):
+    def Engine_on(self):
         print('Engine ON')
 
-    def EngineOFF(self):
+    def Engine_off(self):
         print('EngineOFF')
 
-    def CarYear(self, getyear):
-        self.getyear = getyear
+    def Car_year(self, year):
+        self.year = year
 
-    def CarType(self, gettype):
-        self.gettype = gettype
+    def Car_type(self, cartype):
+        self.cartype = cartype
 
-    def CarColor(self, getcolor):
-        self.getcolor = getcolor
+    def Car_color(self, color):
+        self.color = color
 
 car = Car('red', 'sedan', '2017')
 print(car.__dict__)
-car.EngineON()
-car.EngineOFF()
+car.Engine_on()
+car.Engine_off()
 
-car.CarYear(2002)
-car.CarColor('blue')
-car.CarType('Coupe')
+car.Car_year(2002)
+car.Car_color('blue')
+car.Car_type('Coupe')
 print(car.__dict__)
