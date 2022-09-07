@@ -40,5 +40,3 @@ car.CarYear(2002)
 car.CarColor('blue')
 car.CarType('Coupe')
 print(car.__dict__)
-
-
