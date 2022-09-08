@@ -5,7 +5,12 @@
 
 
 def calculation(a, b):
-    return a + b, a - b
+    amount = a + b
+    yield amount
+    diff = a - b
+    yield diff
 
 
-print(*calculation(4, 2))
+obj = calculation(2, 4)
+print(next(obj))
+print(next(obj))
