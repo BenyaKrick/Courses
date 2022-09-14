@@ -1,4 +1,4 @@
 import my_mod
 
-print(count_lines())
-print(count_chars())
+print(my_mod.count_lines())
+print(my_mod.count_chars())
