@@ -27,7 +27,7 @@ def count_lines(_count):
         with open('file.txt', 'r', encoding='utf-8') as text:
             _line = text.read()
 
-            for i in _line:
+            for i in len(_line):
                 if i == '\n':
                     _count += 1
             text.seek(0)
