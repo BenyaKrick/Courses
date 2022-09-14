@@ -45,8 +45,7 @@ def count_chars(_count1):
             _line = text.read()
 
             for i in _line:
-                if i.isalpha():
-                    _count1 += 1
+                _count1 += i
             text.seek(0)
             _line1 = text.read().split()
 
