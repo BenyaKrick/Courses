@@ -24,7 +24,7 @@ def count_lines(name):
     _count = 0  # счетчик строк
 
     try:
-        with open('name', 'r', encoding='utf-8') as text:
+        with open(name, 'r', encoding='utf-8') as text:
             _line = text.read()
 
             for i in _line:
@@ -41,7 +41,7 @@ def count_lines(name):
 def count_chars(name):
     _count1 = 0  # счетчик букв
     try:
-        with open('name', 'r', encoding='utf-8') as text:
+        with open(name, 'r', encoding='utf-8') as text:
             _line = text.read()
             _count1 = len(_line)
 
@@ -51,5 +51,5 @@ def count_chars(name):
 
 
 def test(name):
-    count_lines()
-    count_chars()
+    count_lines(name)
+    count_chars(name)
