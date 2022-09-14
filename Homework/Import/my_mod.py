@@ -27,7 +27,7 @@ def count_lines(_count):
         with open('file.txt', 'r', encoding='utf-8') as text:
             _line = text.read()
 
-            for i in len(_line):
+            for i in _line:
                 if i == '\n':
                     _count += 1
             text.seek(0)
@@ -44,10 +44,7 @@ def count_chars(_count1):
         with open('file.txt', 'r', encoding='utf-8') as text:
             _line = text.read()
 
-            for i in _line:
-                _count1 += i
-            text.seek(0)
-            _line1 = text.read().split()
+            _count1 = len(_line)
 
     except Exception as e:
         print("Ошибка при работе с файлом:", e)
