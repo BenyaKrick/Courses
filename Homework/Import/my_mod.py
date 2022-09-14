@@ -52,3 +52,6 @@ def count_chars(name):
 
 def test(name):
     return count_lines(name), count_chars(name)
+
+if __name__ == "__main__":
+    test('file.txt')
