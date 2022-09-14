@@ -20,11 +20,11 @@ Python по имени my_mod.py, который экспортирует три
 """
 
 
-def count_lines(_count):
+def count_lines(name):
     _count = 0  # счетчик строк
 
     try:
-        with open('file.txt', 'r', encoding='utf-8') as text:
+        with open('name', 'r', encoding='utf-8') as text:
             _line = text.read()
 
             for i in _line:
@@ -38,13 +38,16 @@ def count_lines(_count):
     return _count + 1
 
 
-def count_chars(_count1):
+def count_chars(name):
     _count1 = 0  # счетчик букв
     try:
-        with open('file.txt', 'r', encoding='utf-8') as text:
+        with open('name', 'r', encoding='utf-8') as text:
             _line = text.read()
             _count1 = len(_line)
 
     except Exception as e:
         print("Ошибка при работе с файлом:", e)
     return _count1
+def test(name):
+    count_lines()
+    count_chars()
