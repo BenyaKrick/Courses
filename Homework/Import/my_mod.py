@@ -43,7 +43,6 @@ def count_chars(_count1):
     try:
         with open('file.txt', 'r', encoding='utf-8') as text:
             _line = text.read()
-
             _count1 = len(_line)
 
     except Exception as e:
