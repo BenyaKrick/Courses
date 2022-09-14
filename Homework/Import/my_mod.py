@@ -35,7 +35,7 @@ def count_lines(_count):
 
     except Exception as e:
         print("Ошибка при работе с файлом:", e)
-    return _count
+    return _count + 1
 
 
 def count_chars(_count1):
