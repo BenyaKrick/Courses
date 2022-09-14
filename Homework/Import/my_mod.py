@@ -55,4 +55,4 @@ def test(name):
 
 
 if __name__ == "__main__":
-    test('file.txt')
+    print(test('file.txt'))
