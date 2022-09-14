@@ -51,5 +51,4 @@ def count_chars(name):
 
 
 def test(name):
-    count_lines(name)
-    count_chars(name)
+    return count_lines(name), count_chars(name)
