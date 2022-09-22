@@ -4,5 +4,5 @@
 превышающих 7.
 """
 _set = {-3, 8, 15, -5, 0, 7}
-print(min(_set)*max(_set))
+print(min(_set) * max(_set))
 print(sum(i for i in _set if i <= 7))
