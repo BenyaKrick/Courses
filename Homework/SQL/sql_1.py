@@ -48,7 +48,5 @@ def main():
         print("Error! cannot create the database connection.")
 
 
-
-
 if __name__ == '__main__':
     create_connection(r"usersdb.db")
