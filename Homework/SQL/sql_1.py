@@ -18,50 +18,6 @@ class Students:
         self.mail = mail
         return name, subname, middlename, age, mail
 
-    def create_connection(db_file):
-        """ create a database connection to a SQLite database """
-        conn = None
-        try:
-            conn = sqlite3.connect(db_file)
-            print(sqlite3.version)
-        except Error as e:
-            print(e)
-        finally:
-            if conn:
-                conn.close()
-
-    def create_table(conn, create_table_sql):
-        try:
-            c = conn.cursor()
-            c.execute(create_table_sql)
-            conn.commit()
-        except Error as e:
-            print(e)
-
-    def main():
-        database = r"students"
-
-        sql_create_projects_table = """
-        create table product 
-        ( 
-          key_id integer PRIMARY KEY not null, 
-          sur_name TEXT not null, 
-          student_name TEXT not null, 
-          middle_name TEXT not null,
-          age INTEGER not null,
-          student_email not null
-        );
-        """
-
-        conn = create_connection(database)
-
-        if conn is not None:
-            create_table(conn, sql_create_projects_table)
-            conn.close()
-        else:
-            print("Error! cannot create the database connection.")
-
-
 stude = Students('sergei', 'vit', 'baronin', '44', "srt@yandex.ru")
 # stude1 = Students('1', '2', '3', '4')
 # stude2 = Students('a', 'b', 'c', 'd')
@@ -83,6 +39,51 @@ print(stude.__dict__)
 # print(stude8.__dict__)
 # print(stude9.__dict__)
 
+def create_connection(db_file):
+    """ create a database connection to a SQLite database """
+    conn = None
+    try:
+        conn = sqlite3.connect(db_file)
+        print(sqlite3.version)
+    except Error as e:
+        print(e)
+    finally:
+        if conn:
+            conn.close()
+
+
+def create_table(conn, create_table_sql):
+    try:
+        c = conn.cursor()
+        c.execute(create_table_sql)
+        conn.commit()
+    except Error as e:
+        print(e)
+
+
+def main():
+    database = r"students"
+
+    sql_create_projects_table = """
+    create table product 
+    ( 
+      key_id integer PRIMARY KEY not null, 
+      sur_name TEXT not null, 
+      student_name TEXT not null, 
+      middle_name TEXT not null,
+      age INTEGER not null,
+      student_email not null
+    );
+    """
+
+    conn = create_connection(database)
+
+    if conn is not None:
+        create_table(conn, sql_create_projects_table)
+        conn.close()
+    else:
+        print("Error! cannot create the database connection.")
+
 
 if __name__ == '__main__':
-    pass
+    create_connection(r"usersdb.db")
