@@ -8,5 +8,6 @@ def main():
     return create_connection("server.db"), create_table("students")
 
 
+
 if __name__ == '__main__':
     main('')
