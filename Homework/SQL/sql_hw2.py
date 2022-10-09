@@ -21,7 +21,5 @@ def create_table(conn, create_table_sql):
         print(e)
 
 
-db= create_connection('server.db')
-create_table(db, 'students')
 if __name__ == '__main__':
-    create_connection()
+    create_connection('server.db')
