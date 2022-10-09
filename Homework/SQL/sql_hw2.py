@@ -1,22 +1,27 @@
 import sqlite3
-
-db = sqlite3.connect('server.db')
-sql_c = db.cursor()
+from sqlite3 import Error
 
 
-def create_table():
-    sql_c.execute("""CREATE TABLE IF NOT EXISTS students (
-          Id_name integer PRIMARY KEY not null 
-          sur_name TEXT not null, 
-          student_name TEXT not null, 
-          middle_name TEXT not null,
-          group_number INTEGER not null,
-          )""")
+def create_connection(db_server):
+    conn = None
+    try:
+        conn = sqlite3.connect(db_server)
+        return conn
+    except Error as e:
+        print(e)
+    return conn
 
 
-db.commit()
+def create_table(conn, create_table_sql):
+    try:
+        cursor = conn.cursor()
+        cursor.execute(create_table_sql)
+        conn.commit()
+    except Error as e:
+        print(e)
 
-db.close()
 
-# if __name__ == '__main__':
-#     pass
+db_server = create_connection('server.db')
+create_table(db_server, 'students')
+if __name__ == '__main__':
+    create_connection()
