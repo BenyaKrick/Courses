@@ -12,7 +12,8 @@ sql.execute("""CREATE TABLE IF NOT EXISTS students (
       student_email not null
       )""")
 db.commit()
-
+for i in range(10):
+    id_name = i
 sur_name = input('enter surname: ')
 student_name = input('enter name: ')
 middle_name = input('enter middlename: ')
