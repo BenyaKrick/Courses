@@ -4,6 +4,7 @@ db = sqlite3.connect('server.db')
 sql = db.cursor()
 
 sql.execute("""CREATE TABLE IF NOT EXISTS students (
+      Id_name INTEGER not null, 
       sur_name TEXT not null, 
       student_name TEXT not null, 
       middle_name TEXT not null,
@@ -20,7 +21,7 @@ student_email = input('enter email: ')
 
 sql.execute("SELECT * FROM students")
 if sql.fetchone() is None:
-    sql.execute(f"INSERT INTO students VALUES ('{sur_name}', '{student_name}', '{middle_name}', '{0}', "
+    sql.execute(f"INSERT INTO students VALUES ('{0}', {sur_name}', '{student_name}', '{middle_name}', '{0}', "
                 f"'{student_email}')")
     db.commit()
 else:
