@@ -5,7 +5,7 @@ create_connection("server.db")
 
 
 def main():
-    create_connection("server.db")
+    return create_connection("server.db")
 
 
 if __name__ == '__main__':
